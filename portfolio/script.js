@@ -28,4 +28,27 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("footer").innerHTML = data;
         })
         .catch(error => console.error("Error loading footer:", error));
+// Handle form submission
+    const contactForm = document.querySelector(".contact-form");
+    contactForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Collect form data
+        const formData = new FormData(contactForm);
+
+        // Use fetch to send data to the server (e.g., action_page.php or Formspree)
+        fetch('action_page.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(result => {
+            console.log("Form submission successful:", result);
+            alert("Your message has been sent successfully!"); // Feedback for the user
+        })
+        .catch(error => {
+            console.error("Form submission failed:", error);
+            alert("There was an error submitting your form. Please try again.");
+        });
+    });
 });
