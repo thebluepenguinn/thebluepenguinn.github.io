@@ -7,13 +7,13 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #283618;
-  background-color: #FEFAE0;
+  color: #7C98B3;
+  background-color: #f8fcff;
 }
 
 .header {
-  background-color: #DDA15E;
-  color: #283618;
+  background-color: #536B78;
+  color: #E5F1F7;
   padding: 1rem;
   text-align: center;
 }
@@ -23,7 +23,7 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  background-color: #606C38;
+  background-color: #536B78;
 }
 
 .navbar ul li {
@@ -31,13 +31,14 @@ body {
 }
 
 .navbar ul li a {
-  color: #FEFAE0;
+  color: #CEE5F2;
   text-decoration: none;
   font-weight: bold;
 }
 
 .navbar ul li a:hover {
   text-decoration: underline;
+  color: #536B78;
 }
 
 .profile-photo {
@@ -58,14 +59,14 @@ main {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #606C38;
+  color: #ACCBE1;
 }
 
 .about-content p {
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 1.2rem;
-  color: #283618;
+  color: #637081;
 }
 
 .resume-content {
@@ -80,8 +81,8 @@ main {
 
 .download-link {
   text-decoration: none;
-  background-color: #BC6C25;
-  color: #FEFAE0;
+  background-color: #7C98B3;
+  color: #CEE5F2;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   display: inline-block;
@@ -89,19 +90,19 @@ main {
 }
 
 .download-link:hover {
-  background-color: #606C38;
+  background-color: #536B78;
 }
 
 .footer {
-  background-color: #606C38;
-  color: #FEFAE0;
+  background-color: #637081;
+  color: #CEE5F2;
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
 }
 
 .footer a {
-  color: #FEFAE0;
+  color: #CEE5F2;
   text-decoration: none;
 }
 
@@ -113,7 +114,7 @@ main {
   max-width: 600px;
   margin: 0 auto;
   padding: 1rem;
-  background-color: #BC6C25;
+  background-color: #7C98B3;
   border-radius: 5px;
 }
 
@@ -125,7 +126,7 @@ main {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: bold;
-  color: #283618;
+  color: #637081;
 }
 
 .input-group input[type="text"],
@@ -137,8 +138,8 @@ main {
 }
 
 .contact-form input[type="submit"] {
-  background-color: #DDA15E;
-  color: #283618;
+  background-color: #ACCBE1;
+  color: #637081;
   border: none;
   padding: 1rem 2rem;
   font-size: 1rem;
@@ -147,5 +148,5 @@ main {
 }
 
 .contact-form input[type="submit"]:hover {
-  background-color: #606C38;
+  background-color: #536B78;
 }
