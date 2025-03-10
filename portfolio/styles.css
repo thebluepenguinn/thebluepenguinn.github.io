@@ -35,8 +35,7 @@ body {
   margin: 0 15px;
 }
 
-.navbar ul li a, 
-.footer a {
+.navbar ul li a, .footer a {
   color: #b2d8fc;  
   text-decoration: none;
   font-weight: bold;
