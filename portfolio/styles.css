@@ -162,6 +162,7 @@ display: block;
 }
 
 footer {
+  width: 100%;
   margin-top: auto;  
   background-color: #536b78;
   padding: 1rem;
