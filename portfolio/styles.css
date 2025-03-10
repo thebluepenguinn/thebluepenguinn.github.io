@@ -64,12 +64,11 @@ main {
   flex-grow: 1;
 }
 
-.icon-photo{
-display: block;
+.icon-photo {
+  display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
-}
+  width: 150px;
 
 .name {
   font-size: 2.5rem;
