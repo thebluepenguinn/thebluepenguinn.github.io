@@ -31,7 +31,7 @@ body {
 }
 
 .navbar ul li a {
-  color: #CEE5F2;
+  color: #C7E0EF;
   text-decoration: none;
   font-weight: bold;
 }
@@ -82,7 +82,7 @@ main {
 .download-link {
   text-decoration: none;
   background-color: #7C98B3;
-  color: #CEE5F2;
+  color: #C7E0EF;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   display: inline-block;
@@ -95,14 +95,14 @@ main {
 
 .footer {
   background-color: #637081;
-  color: #CEE5F2;
+  color: #C7E0EF;
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
 }
 
 .footer a {
-  color: #CEE5F2;
+  color: #C7E0EF;
   text-decoration: none;
 }
 
