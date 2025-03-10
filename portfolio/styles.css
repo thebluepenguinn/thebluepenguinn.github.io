@@ -4,11 +4,18 @@
   box-sizing: border-box;
 }
 
+html, body {
+ height: 100%;
+ margin: 0;
+}
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #536b78;
   background-color: #e0eefc;  
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -55,6 +62,7 @@ main {
   background-color: #b2d8fc; / 
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  flex-grow: 1;
 }
 
 .icon-photo{
@@ -151,4 +159,12 @@ display: block;
 .contact-form input[type="submit"]:hover {
   background-color: #536b78;
   color: #e0eefc;
+}
+
+footer {
+  margin-top: auto;  
+  background-color: #536b78;
+  padding: 1rem;
+  text-align: center;
+  color: #b2d8fc;
 }
