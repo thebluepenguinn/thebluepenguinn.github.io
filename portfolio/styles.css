@@ -11,6 +11,13 @@ body {
   background-color: #e0eefc;  
 }
 
+.container {
+  width: 100%;
+  max-width: 1200px;   
+  margin: 0 auto;  
+  padding: 0 20px; 
+}
+
 /* Header & Navbar */
 .header, .navbar, .footer {
   background-color: #536b78;  
@@ -49,6 +56,16 @@ main {
   background-color: #b2d8fc; / 
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.home-container {
+  padding: 20px;
+}
+
+.name {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #536b78;
 }
 
 .about-content h1, 
