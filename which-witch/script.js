@@ -851,18 +851,24 @@ $(function() {
     if (index < personalityQuiz.questions.length) {
       var question = personalityQuiz.questions[index];
       var answers = randomize([...question.answers]);
-      
-      var testBoard = $("#testBoard").empty().append(`<h5 class='title'>${question.title}</h5><div class='quizDiv'></div>`);
+
+      // Ensure the testBoard is properly updated
+      var testBoard = $("#testBoard").empty().append(`
+        <h5 class='title'>${question.title}</h5>
+        <div class='quizDiv'></div>
+      `);
       var quizDiv = testBoard.find(".quizDiv");
-      
+
+      // Dynamically add answers
       answers.forEach((ans, idx) => {
         const inputId = `answer-${index}-${idx}`;
         quizDiv.append(`
-          <input type='radio' id='${inputId}' name='question' value='${ans.result}' ${collectedAnswers[index] === ans.result ? "checked" : ""}>
+          <input type='radio' id='${inputId}' name='question' value='${ans.result}'>
           <label for='${inputId}'>${ans.answer}</label>
         `);
       });
 
+      // Add navigation buttons
       quizDiv.append(`
         <div class="buttonContainer">
           ${index > 0 ? "<button class='backButton'>Back</button>" : ""}
@@ -886,6 +892,7 @@ $(function() {
     resultsBoard.append(`<p class='resultsParagraph'>${personalityQuiz.descriptions[results[0].count === results[1].count ? 3 : personalityQuiz.results.indexOf(results[0].name)]}</p>`);
   }
 
+  // Ensure proper event handling for the "Next" button
   $("body").on("click", ".quizButton", function() {
     var checkedInput = $("input[name='question']:checked");
     if (!checkedInput.length) {
@@ -897,6 +904,7 @@ $(function() {
     createQuestion();
   });
 
+  // Ensure proper event handling for the "Back" button
   $("body").on("click", ".backButton", function() {
     index--;
     createQuestion();
