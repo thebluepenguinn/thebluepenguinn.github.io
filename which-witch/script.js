@@ -851,17 +851,14 @@ $(function() {
     if (index < personalityQuiz.questions.length) {
       var question = personalityQuiz.questions[index];
       var answers = randomize([...question.answers]);
-
-      var testBoard = $("#testBoard").empty().append(`
-        <h5 class='title'>${question.title}</h5>
-        <div class='quizDiv'></div>
-      `);
+      
+      var testBoard = $("#testBoard").empty().append(`<h5 class='title'>${question.title}</h5><div class='quizDiv'></div>`);
       var quizDiv = testBoard.find(".quizDiv");
-
+      
       answers.forEach((ans, idx) => {
         const inputId = `answer-${index}-${idx}`;
         quizDiv.append(`
-          <input type='radio' id='${inputId}' name='question' value='${ans.result}'>
+          <input type='radio' id='${inputId}' name='question' value='${ans.result}' ${collectedAnswers[index] === ans.result ? "checked" : ""}>
           <label for='${inputId}'>${ans.answer}</label>
         `);
       });
