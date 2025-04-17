@@ -821,7 +821,7 @@ $(function() {
       "You are Agatha (Comics)",
       "You are Agatha (MCU)",
       "You are Glinda (Oz)",
-      "You are Glina (Wicked)",
+      "You are Glinda (Wicked)",
       "You are Elphaba (Oz)",
       "You are Elphaba (Wicked)",
     ]
