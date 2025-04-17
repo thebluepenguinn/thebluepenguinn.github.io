@@ -51,7 +51,7 @@ $(function() {
           {answer: "Midnight blue", result: "Rhiannon"},
           {answer: "Red", result: "Scarlet Witch"},
           {answer: "Purple", result: "Agatha (Comics)"},
-          {answer: "Dark Purple", result: "Agatha (MCU)"},
+          {answer: "Moody Purple", result: "Agatha (MCU)"},
           {answer: "Pink", result: "Glinda (Oz)"},
           {answer: "Pink Sparkles", result: "Glinda (Wicked)"},
           {answer: "Black", result: "Elphaba (Oz)"},
@@ -197,9 +197,9 @@ $(function() {
         answers: [
           {answer: "I light a candle, close my eyes, and let the music take me where it needs to go", result: "Stevie Nicks"},
           {answer: "I wander into the wild, feel the earth beneath me, and let the moonlight take over", result: "Rhiannon"},
-          {answer: "FILL IN", result: "Scarlet Witch"},
-          {answer: "FILL IN", result: "Agatha (Comics)"},
-          {answer: "FILL IN", result: "Agatha (MCU)"},
+          {answer: "Hang out with the people I love", result: "Scarlet Witch"},
+          {answer: "Meditate", result: "Agatha (Comics)"},
+          {answer: "Scheming against other", result: "Agatha (MCU)"},
           {answer: "Try to breathe and stay mindful", result: "Glinda (Oz)"},
           {answer: "I can’t help it, I’ll freak out with my friends", result: "Glinda (Wicked)"},
           {answer: "Why do I need to calm down? I’m going to express my feelings", result: "Elphaba (Oz)"},
@@ -607,7 +607,7 @@ $(function() {
           ]
       },
       {
-        title: "",
+        title: "What word or words best describes you?",
         answers: [
           {
             answer: "Influential",
@@ -828,47 +828,45 @@ $(function() {
   };
 	//end of quiz
 	
-	 function randomize(elements) {
-    for (var i = elements.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      [elements[i], elements[j]] = [elements[j], elements[i]];
+	 function randomize(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
     }
-    return elements;
+    return array;
   }
 
-  var index = 0;
-  var collectedAnswers = [];
-  var startingBtn = $("#start");
+  let index = 0;
+  let collectedAnswers = [];
+  const startingBtn = $("#start");
 
-  startingBtn.on("click", function() {
-    $(this).remove(); // Remove the "Start Quiz" button
-    $("body").append('<div id="testBoard" class="board"></div>'); // Ensure #testBoard is created
-    randomize(personalityQuiz.questions); // Randomize questions
-    createQuestion(); // Start the quiz directly
+  startingBtn.on("click", function () {
+    $(this).remove();
+    $("body").append('<div id="testBoard" class="board"></div>');
+
+    // Randomize and keep only 15 questions
+    personalityQuiz.questions = randomize(personalityQuiz.questions).slice(0, 15);
+
+    createQuestion();
   });
 
   function createQuestion() {
     if (index < personalityQuiz.questions.length) {
-      var question = personalityQuiz.questions[index];
-      var answers = randomize([...question.answers]);
+      const question = personalityQuiz.questions[index];
+      const answers = randomize([...question.answers]);
 
-      // Ensure the testBoard is properly updated
-      var testBoard = $("#testBoard").empty().append(`
-        <h5 class='title'>${question.title}</h5>
-        <div class='quizDiv'></div>
-      `);
-      var quizDiv = testBoard.find(".quizDiv");
+      const testBoard = $("#testBoard").empty();
+      testBoard.append(`<h5 class='title'>${question.title}</h5><div class='quizDiv'></div>`);
+      const quizDiv = testBoard.find(".quizDiv");
 
-      // Dynamically add answers
       answers.forEach((ans, idx) => {
         const inputId = `answer-${index}-${idx}`;
         quizDiv.append(`
-          <input type='radio' id='${inputId}' name='question' value='${ans.result}'>
-          <label for='${inputId}'>${ans.answer}</label>
+          <input type='radio' id='${inputId}' name='question' value='${ans.result}' ${collectedAnswers[index] === ans.result ? "checked" : ""}>
+          <label for='${inputId}'>${ans.answer}</label><br>
         `);
       });
 
-      // Add navigation buttons
       quizDiv.append(`
         <div class="buttonContainer">
           ${index > 0 ? "<button class='backButton'>Back</button>" : ""}
@@ -881,31 +879,36 @@ $(function() {
   }
 
   function showResults() {
-    var resultsBoard = $("<div>", { class: "resultsBoard" }).appendTo("body");
+    const resultsBoard = $("<div>", { class: "resultsBoard" }).appendTo("body");
     $("body").children().not(resultsBoard).hide();
 
-    var results = personalityQuiz.results.map(result => ({
+    const resultCounts = personalityQuiz.results.map(result => ({
       name: result,
       count: collectedAnswers.filter(item => item === result).length
     })).sort((a, b) => b.count - a.count);
 
-    resultsBoard.append(`<p class='resultsParagraph'>${personalityQuiz.descriptions[results[0].count === results[1].count ? 3 : personalityQuiz.results.indexOf(results[0].name)]}</p>`);
+    const winner = resultCounts[0];
+    const isTie = resultCounts[1] && winner.count === resultCounts[1].count;
+
+    resultsBoard.append(`
+      <p class='resultsParagraph'>
+        ${personalityQuiz.descriptions[isTie ? 3 : personalityQuiz.results.indexOf(winner.name)]}
+      </p>
+    `);
   }
 
-  // Ensure proper event handling for the "Next" button
-  $("body").on("click", ".quizButton", function() {
-    var checkedInput = $("input[name='question']:checked");
+  $("body").on("click", ".quizButton", function () {
+    const checkedInput = $("input[name='question']:checked");
     if (!checkedInput.length) {
       alert("Before moving forward, choose an answer!");
       return;
     }
-    collectedAnswers[index] = checkedInput.val(); // Save the selected answer
+    collectedAnswers[index] = checkedInput.val();
     index++;
     createQuestion();
   });
 
-  // Ensure proper event handling for the "Back" button
-  $("body").on("click", ".backButton", function() {
+  $("body").on("click", ".backButton", function () {
     index--;
     createQuestion();
   });
