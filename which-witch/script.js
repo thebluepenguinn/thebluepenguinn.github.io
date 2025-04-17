@@ -651,7 +651,7 @@ $(function() {
         title: "What role do you play in your friend group?",
         answers: [
           {
-            answer: "The mom friend",
+            answer: "The creative friend",
             result: "Stevie Nicks"
           },
           {
