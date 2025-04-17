@@ -607,47 +607,6 @@ $(function() {
           ]
       },
       {
-        title: "What word or words best describes you?",
-        answers: [
-          {
-            answer: "Influential",
-            result: "Stevie Nicks"
-          },
-          {
-            answer: "Free-spirited",
-            result: "Rhiannon"
-          },
-          {
-            answer: "Outcast",
-            result: "Scarlet Witch"
-          },
-          {
-            answer: "Spiritual",
-            result: "Agatha (Comics)"
-          },
-          {
-            answer: "Judgemental", 
-            result: "Agatha (MCU)"
-          },
-          {
-            answer: "Kind",
-            result: "Glinda (Oz)"
-          },
-          {
-            answer:"Evil",
-            result: "Glinda (Wicked)"
-          },
-          {
-            answer:"Evil",
-            result: "Elphaba (Oz)"
-          },
-          {
-            answer:"Independent",
-            result: "Elphaba (Wicked)"
-          }
-          ]
-      },
-      {
         title: "What role do you play in your friend group?",
         answers: [
           {
