@@ -107,21 +107,24 @@ input[type="radio"]:checked + label {
 }
 
 .resultImage, .descriptionImage {
-  max-width: 100%; /* Ensures the image doesn't exceed the container's width */
+  width: 100%; /* Ensures the image fills the container's width */
   height: auto; /* Maintains the aspect ratio */
   margin: 10px auto; /* Adds space around the images and centers them horizontally */
   border: 2px solid #d4af37; /* Golden border for a magical touch */
   border-radius: 10px; /* Rounds the corners of the images */
   box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5); /* Glowing effect */
   display: block; /* Center-align images */
+  object-fit: contain; /* Ensures the image fits within the container without changing its aspect ratio */
 }
 
 @media (max-width: 600px) {
   .resultImage, .descriptionImage {
     width: 90%; /* Adjusts the width for smaller screens */
     height: auto; /* Maintains the aspect ratio */
+    object-fit: contain; /* Ensures the image fits within the container without changing its aspect ratio */
   }
 }
+
 
 .resultsBoard {
   max-width: 600px;
