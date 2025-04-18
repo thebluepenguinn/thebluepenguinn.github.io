@@ -175,7 +175,6 @@ h5 {
 .quizDiv {
   display: flex;
   flex-direction: column; /* Keep questions and options in a column layout */
-  gap: 15px; /* Add spacing between elements */
 }
 
 .quizDiv button {
