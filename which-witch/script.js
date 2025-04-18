@@ -779,7 +779,7 @@ $(function() {
       { name: "Agatha (Comics)", image: "result_img/agatha_comics_front.png", descriptionImage: "result_img/agatha_comics_back.png" },
       { name: "Agatha (MCU)", image: "result_img/agatha_mcu_front.png", descriptionImage: "result_img/agatha_mcu_back.png" },
       { name: "Glinda (Oz)", image: "result_img/glinda_oz_front.png", descriptionImage: "result_img/glinda_oz_back.png" },
-      { name: "Glinda (Wicked)", image: "result_img/glinda_wicked_front.png", descriptionImage: "result_img/glinda_wicked_back.png" },
+      { name: "Glinda (Wicked)", image: "result_img/glina_wicked_front.png", descriptionImage: "result_img/glinda_wicked_back.png" },
       { name: "Elphaba (Oz)", image: "result_img/elphaba_oz_front.png", descriptionImage: "result_img/elphaba_oz_back.png" },
       { name: "Elphaba (Wicked)", image: "result_img/elphaba_wicked_front.png", descriptionImage: "result_img/elphaba_wicked_back.png" }
 ],
