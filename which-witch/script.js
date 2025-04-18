@@ -225,7 +225,7 @@ $(function() {
           {answer: "Spiritual music with hidden meanings, something that tells a story", result: "Stevie Nicks"},
           {answer: "Ominous music that whispers secrets and makes you feel something deep inside", result: "Rhiannon"},
           {answer: "Ominous music that has a hidden meaning", result: "Scarlet Witch"},
-          {answer: "Spiritual music.", result: "Agatha (Comics)"},
+          {answer: "Spiritual music", result: "Agatha (Comics)"},
           {answer: "Dark gothic music", result: "Agatha (MCU)"},
           {answer: "Sweet and comforting melodies", result: "Glinda (Oz)"},
           {answer:"Beautiful operatic music", result: "Glinda (Wicked)"},
@@ -306,7 +306,7 @@ $(function() {
        {
         title: "How would you react if someone did you dirty?",
         answers: [
-          {answer: "I’d keep it inside, let it fester, then write a song about it.", result: "Stevie Nicks"},
+          {answer: "I’d keep it inside, let it fester, then write a song about it", result: "Stevie Nicks"},
           {answer: "I’d keep my calm, but eventually, it will come back to them. The wind always balances things out", result: "Rhiannon"},
           {answer: "Don't do anything in the moment and bottle it up until eventually it becomes too much and you break", result: "Scarlet Witch"},
           {answer: "Forgive and try to help them not do it again", result: "Agatha (Comics)"},
