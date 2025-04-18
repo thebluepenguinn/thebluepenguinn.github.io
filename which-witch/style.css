@@ -119,6 +119,18 @@ input[type="radio"]:checked + label {
   object-fit: contain; /* Ensures the image fits within the container without changing its aspect ratio */
 }
 
+.quizDescriptionImage {
+    width: 100%; /* Ensures the image fills the container's width */
+    height: auto; /* Maintains the aspect ratio */
+    margin: 20px auto; /* Centers the image and adds spacing */
+    border: 2px solid #d4af37; /* Golden border for magical vibes */
+    border-radius: 10px; /* Rounds corners */
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5); /* Glowing effect */
+    display: block; /* Centers the image horizontally */
+    object-fit: contain; /* Prevents distortion */
+}
+
+
 @media (max-width: 600px) {
   .resultImage, .descriptionImage {
     width: 90%; /* Adjusts the width for smaller screens */
