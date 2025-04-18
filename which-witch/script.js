@@ -1,6 +1,5 @@
 $(function() {
-  //first, create a set of questions, answers and results
-  var personalityQuiz = {
+   var personalityQuiz = {
     questions: [
       {
         title: "What would you do in a situation where you got bombarded with a lot of stressful events and then everyone blames you for reacting in a certain way?",
@@ -837,24 +836,29 @@ $(function() {
     }
   }
 
-  function showResults() {
-    const resultsBoard = $("<div>", { class: "resultsBoard" }).appendTo("body");
-    $("body").children().not(resultsBoard).hide();
+ function showResults() {
+  const resultsBoard = $("<div>", { class: "resultsBoard" }).appendTo("body");
+  $("body").children().not(resultsBoard).hide();
 
-    const resultCounts = personalityQuiz.results.map(result => ({
-      name: result,
-      count: collectedAnswers.filter(item => item === result).length
-    })).sort((a, b) => b.count - a.count);
+  const resultCounts = personalityQuiz.results.map(result => ({
+    name: result.name,
+    image: result.image,
+    descriptionImage: result.descriptionImage,
+    count: collectedAnswers.filter(item => item === result.name).length
+  })).sort((a, b) => b.count - a.count);
 
-    const winner = resultCounts[0];
-    const isTie = resultCounts[1] && winner.count === resultCounts[1].count;
+  const winner = resultCounts[0];
+  const isTie = resultCounts[1] && winner.count === resultCounts[1].count;
 
-    resultsBoard.append(`
-      <p class='resultsParagraph'>
-        ${personalityQuiz.descriptions[isTie ? 3 : personalityQuiz.results.indexOf(winner.name)]}
-      </p>
-    `);
-  }
+  resultsBoard.append(`
+    <p class='resultsParagraph'>
+      ${personalityQuiz.descriptions[isTie ? 3 : personalityQuiz.results.find(r => r.name === winner.name).description]}
+    </p>
+    <img src='${winner.image}' alt='${winner.name}' class='resultImage'>
+    <img src='${winner.descriptionImage}' alt='${winner.name} description' class='descriptionImage'>
+  `);
+}
+
 
   $("body").on("click", ".quizButton", function () {
     const checkedInput = $("input[name='question']:checked");
