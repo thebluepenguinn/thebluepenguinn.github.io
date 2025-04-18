@@ -173,37 +173,37 @@ h5 {
 
 
 .quizDiv {
-  display: flex;
-  flex-direction: column; /* Keep questions and options in a column layout */
-  gap: 10px; /* Decreased spacing between elements */
+  display: flex;
+  flex-direction: column; /* Keep questions and options in a column layout */
+  gap: 15px; /* Add spacing between elements */
 }
 
 .quizDiv button {
-  flex: 1;
-  margin: 3px; /* Decreased spacing between buttons */
+  flex: 1;
+  margin: 5px; /* Reduce spacing between buttons */
 }
 
 .buttonContainer {
-  display: flex;
-  justify-content: space-between; /* Align buttons horizontally */
-  margin-top: 20px; /* Add spacing above the buttons */
+  display: flex;
+  justify-content: space-between; /* Align buttons horizontally */
+  margin-top: 20px; /* Add spacing above the buttons */
 }
 
 .quizButton, .backButton {
-  flex: 1; /* Ensure buttons take equal space */
-  margin: 0 3px; /* Decreased spacing between buttons */
-  padding: 12px 25px;
-  background-color: #6b3fa0; /* Deep purple for a magical vibe */
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 10px rgba(107, 63, 160, 0.5); /* Glow effect */
+  flex: 1; /* Ensure buttons take equal space */
+  margin: 0 5px; /* Reduce spacing between buttons */
+  padding: 12px 25px;
+  background-color: #6b3fa0; /* Deep purple for a magical vibe */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(107, 63, 160, 0.5); /* Glow effect */
 }
 
 .quizButton:hover, .backButton:hover {
-  background-color: #8a4fcf; /* Lighter purple on hover */
-  transform: scale(1.05); /* Slight zoom effect */
+  background-color: #8a4fcf; /* Lighter purple on hover */
+  transform: scale(1.05); /* Slight zoom effect */
 }
