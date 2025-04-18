@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap'); /* Add spooky font */
+@import url('https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap'); /* Add Mystery Quest font */
+
+
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #1e1e2f; /* Dark mystical background */
+  color: #eaeaea; /* Light text for contrast */
+  margin: 0;
+  padding: 0;
+}
+
+#quiz {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #2a2a3d; /* Darker background for the quiz container */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Mystical shadow effect */
+  border: 1px solid #444; /* Subtle border */
+  text-align: center; /* Center-align content */
+}
+
+h1 {
+  text-align: center;
+  color: #d4af37; /* Golden color for a magical touch */
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.8); /* Glowing effect */
+  font-family: 'Mystery Quest', cursive; /* Witchy font */
+}
+
+#question {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #eaeaea;
+  padding: 20px; /* Increased padding for better spacing */
+  background-color: #3a3a5c; /* Slightly lighter background for readability */
+  border: 1px solid #555;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 1.6; /* Increased line height for better readability */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+#options {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 12px 25px;
+  background-color: #6b3fa0; /* Deep purple for a magical vibe */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(107, 63, 160, 0.5); /* Glow effect */
+}
+
+button:hover {
+  background-color: #8a4fcf; /* Lighter purple on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+label {
+  display: block;
+  padding: 10px;
+  background-color: #2a2a3d;
+  border: 1px solid #555;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  color: #eaeaea;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+label:hover {
+  background-color: #3a3a5c; /* Slightly lighter on hover */
+  transform: scale(1.02);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + label {
+  background-color: #6b3fa0; /* Highlighted purple for selected option */
+  color: #ffffff;
+  border-color: #6b3fa0;
+  box-shadow: 0 0 10px rgba(107, 63, 160, 0.8); /* Glow effect */
+}
+
+resultsBoard {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #2a2a3d;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border: 1px solid #444;
+}
+
+.resultsParagraph {
+  font-size: 1.5em;
+  color: #d4af37; /* Golden color for results */
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.8); /* Glowing effect */
+}
+
+h5 {
+  font-size: 1.3em; /* Increase font size */
+  color: #eaeaea; /* Match the text color with the theme */
+  line-height: 1.6; /* Improve line spacing */
+  margin-bottom: 15px; /* Add spacing below */
+  text-align: center; /* Center-align for better readability */
+}
+
+.quizDiv {
+  display: flex;
+  flex-direction: column; /* Keep questions and options in a column layout */
+  gap: 15px; /* Add spacing between elements */
+}
+
+.quizDiv button {
+  flex: 1;
+  margin: 10px; /* Add spacing between buttons */
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between; /* Align buttons horizontally */
+  margin-top: 20px; /* Add spacing above the buttons */
+}
+
+.quizButton, .backButton {
+  flex: 1; /* Ensure buttons take equal space */
+  margin: 0 10px; /* Add spacing between buttons */
+  padding: 12px 25px;
+  background-color: #6b3fa0; /* Deep purple for a magical vibe */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(107, 63, 160, 0.5); /* Glow effect */
+}
+
+.quizButton:hover, .backButton:hover {
+  background-color: #8a4fcf; /* Lighter purple on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
