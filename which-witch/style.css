@@ -107,13 +107,36 @@ input[type="radio"]:checked + label {
 }
 
 .resultImage, .descriptionImage {
-  max-width: 100%;
-  height: auto;
-  margin: 10px auto;
-  border: 2px solid #d4af37; /* Golden border for a magical touch */
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5); /* Glowing effect */
-  display: block; /* Center-align images */
+  max-width: 100%; /* Ensures the image width does not exceed the container width */
+  height: auto; /* Maintains the aspect ratio of the images */
+  margin: 10px auto; /* Adds space around the images and centers them horizontally */
+  border: 2px solid #d4af37; /* Golden border for a magical touch */
+  border-radius: 10px; /* Rounds the corners of the images */
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5); /* Glowing effect */
+  display: block; /* Center-align images */
+}
+
+@media (max-width: 600px) {
+  .resultImage, .descriptionImage {
+    max-width: 90%; /* Adjusts the width for smaller screens */
+  }
+}
+
+.resultsBoard {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #2a2a3d;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border: 1px solid #444;
+}
+
+.resultsParagraph {
+  font-size: 1.5em;
+  color: #d4af37; /* Golden color for results */
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.8); /* Glowing effect */
 }
 
 
