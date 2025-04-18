@@ -55,28 +55,9 @@ h1 {
 
 
 #options {
-  display: grid;
-  gap: 10px; /* Reduces the gap between buttons */
-  grid-template-columns: repeat(2, 1fr);
-}
-
-button {
-  display: block;
-  margin: 10px auto; /* Reduces the margin to bring buttons closer together */
-  padding: 12px 25px;
-  background-color: #6b3fa0; /* Deep purple for a magical vibe */
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 10px rgba(107, 63, 160, 0.5); /* Glow effect */
-}
-
-button:hover {
-  background-color: #8a4fcf; /* Lighter purple on hover */
-  transform: scale(1.05); /* Slight zoom effect */
+  display: grid;
+  gap: 10px; /* Reduces the gap between the quiz options */
+  grid-template-columns: repeat(2, 1fr);
 }
 
 label {
@@ -89,12 +70,33 @@ label {
   transition: background-color 0.3s ease, transform 0.2s ease;
   color: #eaeaea;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  margin: 5px; /* Adds a small margin to reduce spacing */
 }
 
 label:hover {
   background-color: #3a3a5c; /* Slightly lighter on hover */
   transform: scale(1.02);
 }
+
+button {
+  display: block;
+  margin: 20px auto 0; /* Original margin for the "Start Quiz" button */
+  padding: 12px 25px;
+  background-color: #6b3fa0; /* Deep purple for a magical vibe */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(107, 63, 160, 0.5); /* Glow effect */
+}
+
+button:hover {
+  background-color: #8a4fcf; /* Lighter purple on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
 
 input[type="radio"] {
   display: none;
