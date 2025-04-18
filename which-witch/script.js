@@ -771,7 +771,19 @@ $(function() {
           ]
       },
     ],
-    results: ["Stevie Nicks", "Rhiannon", "Scarlet Witch", "Agatha (Comics)", "Agatha (MCU)", "Glinda (Oz)", "Glinda (Wicked)", "Elphaba (Oz)", "Elphaba (Wicked)"],
+    results: [
+
+      { name: "Stevie Nicks", image: "result_img/Stevie_front.png", descriptionImage: "result_img/stevie_back.png" },
+      { name: "Rhiannon", image: "result_img/rhiannon_front.png", descriptionImage: "result_img/rhiannon_back.png" },
+      { name: "Scarlet Witch", image: "result_img/wanda_front.png", descriptionImage: "result_img/wanda_back.png" },
+      { name: "Agatha (Comics)", image: "result_img/agatha_comics_front.png", descriptionImage: "result_img/agatha_comics_back.png" },
+      { name: "Agatha (MCU)", image: "result_img/agatha_mcu_front.png", descriptionImage: "result_img/agatha_mcu_back.png" },
+      { name: "Glinda (Oz)", image: "result_img/glinda_oz_front.png", descriptionImage: "result_img/glinda_oz_back.png" },
+      { name: "Glinda (Wicked)", image: "result_img/glinda_wicked_front.png", descriptionImage: "result_img/glinda_wicked_back.png" },
+      { name: "Elphaba (Oz)", image: "result_img/elphaba_oz_front.png", descriptionImage: "result_img/elphaba_oz_back.png" },
+      { name: "Elphaba (Wicked)", image: "result_img/elphaba_wicked_front.png", descriptionImage: "result_img/elphaba_wicked_back.png" }
+],
+	   
     descriptions: [
       "You are Stevie Nicks",
       "You are Rhiannon",
@@ -850,13 +862,15 @@ $(function() {
   const winner = resultCounts[0];
   const isTie = resultCounts[1] && winner.count === resultCounts[1].count;
 
-  resultsBoard.append(`
-    <p class='resultsParagraph'>
-      ${personalityQuiz.descriptions[isTie ? 3 : personalityQuiz.results.find(r => r.name === winner.name).description]}
-    </p>
-    <img src='${winner.image}' alt='${winner.name}' class='resultImage'>
-    <img src='${winner.descriptionImage}' alt='${winner.name} description' class='descriptionImage'>
-  `);
+
+resultsBoard.append(`
+  <p class='resultsParagraph'>
+    ${personalityQuiz.descriptions[isTie ? 3 : personalityQuiz.results.find(r => r.name === winner.name).description]}
+  </p>
+  <img src='${winner.image}' alt='${winner.name}' class='resultImage'>
+  <img src='${winner.descriptionImage}' alt='${winner.name} description' class='descriptionImage'>
+`);
+
 }
 
 
