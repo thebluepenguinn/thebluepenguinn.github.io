@@ -847,8 +847,8 @@ $(function() {
       showResults();
     }
   }
-
- function showResults() {
+	
+function showResults() {
   const resultsBoard = $("<div>", { class: "resultsBoard" }).appendTo("body");
   $("body").children().not(resultsBoard).hide();
 
@@ -862,16 +862,17 @@ $(function() {
   const winner = resultCounts[0];
   const isTie = resultCounts[1] && winner.count === resultCounts[1].count;
 
+  const winnerDescription = personalityQuiz.descriptions[personalityQuiz.results.findIndex(r => r.name === winner.name)];
 
-resultsBoard.append(`
-  <p class='resultsParagraph'>
-    ${personalityQuiz.descriptions[isTie ? 3 : personalityQuiz.results.find(r => r.name === winner.name).description]}
-  </p>
-  <img src='${winner.image}' alt='${winner.name}' class='resultImage'>
-  <img src='${winner.descriptionImage}' alt='${winner.name} description' class='descriptionImage'>
-`);
-
+  resultsBoard.append(`
+    <p class='resultsParagraph'>
+      ${winnerDescription}
+    </p>
+    <img src='${winner.image}' alt='${winner.name}' class='resultImage'>
+    <img src='${winner.descriptionImage}' alt='${winner.name} description' class='descriptionImage'>
+  `);
 }
+
 
 
   $("body").on("click", ".quizButton", function () {
