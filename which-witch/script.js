@@ -808,17 +808,18 @@ $(function() {
 
   let index = 0;
   let collectedAnswers = [];
-  const startingBtn = $("#start");
+const startingBtn = $("#start");
 
-  startingBtn.on("click", function () {
-    $(this).remove();
+startingBtn.on("click", function () {
+    $("#introSection").remove(); // Remove the intro section
     $("body").append('<div id="testBoard" class="board"></div>');
 
     // Randomize and keep only 15 questions
     personalityQuiz.questions = randomize(personalityQuiz.questions).slice(0, 15);
 
     createQuestion();
-  });
+});
+
 
   function createQuestion() {
     if (index < personalityQuiz.questions.length) {
