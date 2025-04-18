@@ -179,7 +179,7 @@ h5 {
 
 .quizDiv button {
   flex: 1;
-  margin: 10px; /* Add spacing between buttons */
+  margin: 5px; /* Reduce spacing between buttons */
 }
 
 .buttonContainer {
@@ -190,7 +190,7 @@ h5 {
 
 .quizButton, .backButton {
   flex: 1; /* Ensure buttons take equal space */
-  margin: 0 10px; /* Add spacing between buttons */
+  margin: 0 5px; /* Reduce spacing between buttons */
   padding: 12px 25px;
   background-color: #6b3fa0; /* Deep purple for a magical vibe */
   color: #ffffff;
