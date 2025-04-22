@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap'); /* Add spooky font */
-@import url('https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap'); /* Add Mystery Quest font */
-
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap');  
 
 html {
     overflow-y: scroll;
@@ -14,7 +13,7 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #1e1e2f; /* Dark mystical background */
+  background-color: #1e1e2f; /* Dark background */
   color: #eaeaea; /* Light text for contrast */
   margin: 0;
   padding: 0;
@@ -26,18 +25,18 @@ body {
   padding: 20px;
   background-color: #2a2a3d; /* Darker background for the quiz container */
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Mystical shadow effect */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /*shadow effect */
   border: 1px solid #444; /* Subtle border */
   text-align: center; /* Center-align content */
 }
 
 h1 {
   text-align: center;
-  color: #d4af37; /* Golden color for a magical touch */
+  color: #d4af37; /* Golden color */
   font-size: 2.5em;
   margin-bottom: 20px;
   text-shadow: 0 0 10px rgba(212, 175, 55, 0.8); /* Glowing effect */
-  font-family: 'Mystery Quest', cursive; /* Witchy font */
+  font-family: 'Mystery Quest', cursive;  
 }
 
 #question {
@@ -64,7 +63,7 @@ button {
   display: block;
   margin: 20px auto 0;
   padding: 12px 25px;
-  background-color: #6b3fa0; /* Deep purple for a magical vibe */
+  background-color: #6b3fa0; /* Deep purple */
   color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -112,7 +111,7 @@ input[type="radio"]:checked + label {
   width: 100%; /* Ensures the image fills the container's width */
   height: auto; /* Maintains the aspect ratio */
   margin: 10px auto; /* Adds space around the images and centers them horizontally */
-  border: 2px solid #d4af37; /* Golden border for a magical touch */
+  border: 2px solid #d4af37; /* Golden border */
   border-radius: 10px; /* Rounds the corners of the images */
   box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5); /* Glowing effect */
   display: block; /* Center-align images */
@@ -173,7 +172,7 @@ resultsBoard {
 
 h5 {
   font-size: 1.3em; /* Increase font size */
-  color: #eaeaea; /* Match the text color with the theme */
+  color: #eaeaea;  
   line-height: 1.6; /* Improve line spacing */
   margin-bottom: 15px; /* Add spacing below */
   text-align: center; /* Center-align for better readability */
@@ -200,7 +199,7 @@ h5 {
   flex: 1; /* Ensure buttons take equal space */
   margin: 0 5px; /* Reduce spacing between buttons */
   padding: 12px 25px;
-  background-color: #6b3fa0; /* Deep purple for a magical vibe */
+  background-color: #6b3fa0; /* Deep purple */
   color: #ffffff;
   border: none;
   border-radius: 5px;
